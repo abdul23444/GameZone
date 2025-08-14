@@ -86,7 +86,7 @@ document.addEventListener('click', (e) => {
 
 
         let length = []
-        for (let i = 0; i < JSON.parse(localStorage.getItem("whishlistProducts")).length; i++) {
+        for (let i = 0; i < (JSON.parse(localStorage.getItem("whishlistProducts"))?JSON.parse(localStorage.getItem("whishlistProducts")).length:0); i++) {
             let a = JSON.parse(localStorage.getItem("whishlistProducts"));
             length.push(a[i].product.product_id)
         }
